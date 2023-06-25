@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WeSplit
+//  WeSplit #100DaysOfSwiftUI by @TwoStraws Paul Hudson
 //  Day17
 //  Created by yannemal on 09/06/2023.
 //
@@ -16,7 +16,7 @@ struct ContentView: View {
     @FocusState private var amountIsFocused : Bool
     //constant
     let tipPercentages = [5, 7, 10, 12, 15, 20, 25, 0]
-    
+    // computed property
     var totalPerPerson: Double {
         // the Picker range starts counting at 2 index2 == 4 therefore
         let peopleCountCorrect = Double(numberOfPeople + 2)
@@ -25,6 +25,7 @@ struct ContentView: View {
         let tipValue = checkAmount / 100 * tipSelection
         let grandTotal = checkAmount + tipValue
         let amountPerPerson = grandTotal / peopleCountCorrect
+        // print("-amount-comp[uted: \(amountPerPerson)")
         return amountPerPerson
     }
     
