@@ -11,4 +11,4 @@ HackingWithSwift.com
 - Select a pre set Tip amount using a segmented 
    Picker View
   
-![Screenshot 2023-06-25 at 19 33 17](https://github.com/Yannemal/WeSplit/assets/56878180/813f82bb-28cc-4d11-a9fa-716ca98de80d)
+![Screenshot 2023-06-25 at 19 35 08](https://github.com/Yannemal/WeSplit/assets/56878180/94ab4a6b-75d5-4808-b50d-a745127a097b)
