@@ -10,3 +10,5 @@ HackingWithSwift.com
 - Select the number of friends using a Picker view.
 - Select a pre set Tip amount using a segmented 
    Picker View
+  
+![Screenshot 2023-06-25 at 19 33 17](https://github.com/Yannemal/WeSplit/assets/56878180/813f82bb-28cc-4d11-a9fa-716ca98de80d)
