@@ -12,15 +12,23 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 20
+    
+ 
+    
+   
     // private var currencySymbol = Locale.current.currencySymbol
     @FocusState private var amountIsFocused : Bool
     //constant
     let tipPercentages = [5, 7, 10, 12, 15, 20, 25, 0]
-    // computed property
+    
+
+    
+    // computed property:
     var totalPerPerson: Double {
         // the Picker range starts counting at 2 index2 == 4 therefore
         let peopleCountCorrect = Double(numberOfPeople + 2)
         let tipSelection = Double(tipPercentage)
+                    //computed property
         
         let tipValue = checkAmount / 100 * tipSelection
         let grandTotal = checkAmount + tipValue
@@ -29,6 +37,18 @@ struct ContentView: View {
         return amountPerPerson
     }
     
+//    // computed property:
+//    var noTip : Bool {
+//        //internalise values first
+//        let tipPercentageNow = tipPercentage
+//        
+//       if tipPercentageNow < 5 {
+//          return true
+//       } else {
+//           return false
+//       }
+//   }
+
     // viewDidLoad in SwiftUI
     var body: some View {
         NavigationStack {
@@ -43,6 +63,7 @@ struct ContentView: View {
                         ForEach(2..<100) {
                             Text(" \($0) people")
                         }
+                        
                     }
                 } header: {
                     Text("add 💰 amount and  👯‍♀️people paying:")
@@ -53,6 +74,7 @@ struct ContentView: View {
                         ForEach(tipPercentages, id: \.self) {
                             Text($0, format: .percent)
                         }
+                        
                     }
                     .pickerStyle(.segmented)
                 } header: {
@@ -63,6 +85,10 @@ struct ContentView: View {
                 Section{
                     Text("Amount evenly split:")
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundColor((tipPercentage < 5) ? .red : .primary)
+                       
+
+
                 }
             }
             // modify the form
